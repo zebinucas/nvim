@@ -42,3 +42,6 @@ opt.smartcase = true
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
+-- 设置自动折行
+vim.cmd([[set wrap]])
