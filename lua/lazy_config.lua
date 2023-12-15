@@ -18,5 +18,17 @@ require("lazy").setup({
 		"RRethy/nvim-base16",
 		lazy = true,
 	},
+  {
+    "navarasu/onedark.nvim",
+    lazy = true
+  },
+  -- 文件搜索查找插件
+  {
+		cmd = "Telescope",
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.5",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 })
 require("plugins/colorscheme")
+require("plugins/telescope")
