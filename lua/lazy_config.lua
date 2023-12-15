@@ -38,9 +38,12 @@ local plugins = {
   {
     'akinsho/bufferline.nvim',
     lazy = true
-  }
+  },
+  "nvim-treesitter/nvim-treesitter", -- 语法高亮
+  "p00f/nvim-ts-rainbow", -- 配合treesitter，不同括号颜色区分
+  "windwp/nvim-autopairs", -- 自动补全括号
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
 }
 
 local opts = {} -- 注意要定义这个变量
-
 require("lazy").setup(plugins, opts)
