@@ -30,7 +30,15 @@ local plugins = {
     lazy = true
   },
   -- 文档树
-  "nvim-tree/nvim-tree.lua",
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = true
+  },
+  -- 标签页
+  {
+    'akinsho/bufferline.nvim',
+    lazy = true
+  }
 }
 
 local opts = {} -- 注意要定义这个变量
