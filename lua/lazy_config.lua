@@ -12,23 +12,27 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup({
-  -- 主题插件
-	{
-		"RRethy/nvim-base16",
-		lazy = true,
-	},
+
+local plugins = {
+  -- 主题
+  { "navarasu/onedark.nvim", lazy = true },
+  -- 文件检索
   {
-    "navarasu/onedark.nvim",
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  -- 文档树图标
+  "nvim-tree/nvim-web-devicons", 
+  -- 状态栏
+  {
+    "nvim-lualine/lualine.nvim",
     lazy = true
   },
-  -- 文件搜索查找插件
-  {
-		cmd = "Telescope",
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
-		dependencies = { "nvim-lua/plenary.nvim" },
-	},
-})
-require("plugins/colorscheme")
-require("plugins/telescope")
+  -- 文档树
+  "nvim-tree/nvim-tree.lua",
+}
+
+local opts = {} -- 注意要定义这个变量
+
+require("lazy").setup(plugins, opts)
