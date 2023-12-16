@@ -27,6 +27,12 @@ keymap.set("n", "<C-h>", "<C-w>h") -- 水平切换窗口
 keymap.set("n", "<C-j>", "<C-w>j") -- 垂直切换窗口
 keymap.set("n", "<C-k>", "<C-w>k") -- 垂直切换窗口
 
+-- 设置窗口大小
+keymap.set("n", "<A-Up>", ":resize -2<CR>")
+keymap.set("n", "<A-Down>", ":resize +2<CR>")
+keymap.set("n", "<A-Left>", ":vertical resize -2<CR>")
+keymap.set("n", "<A-Right>", ":vertical resize +2<CR>")
+
 -- 文件跳转
 keymap.set("n", "<leader>[", "<C-o>") -- 跳转回跳转历史中较早的位置
 keymap.set("n", "<leader>]", "<C-i>") -- 跳转回跳转历史中较晚的位置

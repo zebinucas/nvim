@@ -78,7 +78,7 @@ local plugins = {
 	{
 		"simrat39/rust-tools.nvim",
 		ft = "rust",
-		dependencies = "nevim/nvim-lspconfig",
+		dependencies = "neovim/nvim-lspconfig",
 		opts = function()
 			return require("plugins.rust_tools")
 		end,
