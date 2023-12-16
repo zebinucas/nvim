@@ -42,7 +42,9 @@ local plugins = {
   "nvim-treesitter/nvim-treesitter", -- 语法高亮
   "p00f/nvim-ts-rainbow", -- 配合treesitter，不同括号颜色区分
   "windwp/nvim-autopairs", -- 自动补全括号
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  -- terminal
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 }
 
 local opts = {} -- 注意要定义这个变量

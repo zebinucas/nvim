@@ -31,8 +31,6 @@ keymap.set("n", "<C-k>", "<C-w>k") -- 垂直切换窗口
 keymap.set("n", "<leader>[", "<C-o>") -- 跳转回跳转历史中较早的位置
 keymap.set("n", "<leader>]", "<C-i>") -- 跳转回跳转历史中较晚的位置
 
--- 打开命令行 windows 配置到默认打开pwsh
-keymap.set("n", "<leader>t", ":ter pwsh<ENTER>")
 -- https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
 -- 按jk的时候使用可视行，number jk的时候使用相对行号
 vim.keymap.set("n", "j", [[v:count ? 'j' : 'gj']], { noremap = true, expr = true })
